@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1599068924 source:e:\ds\selectionsort\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
