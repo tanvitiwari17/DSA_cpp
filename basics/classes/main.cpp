@@ -22,14 +22,23 @@ public :
     {
         cout<<"\na="<<a<<" b="<<b;
     }
+    Complex add(Complex c)
+    {
+     Complex temp;
+     temp.a = a+c.a;
+     temp.b = b+c.b;
+     return (temp);
+    }
 };
 
 int main()
 {
 
-    Complex c1; //c1 is an object of class Compl ex
+    Complex c1,c2,c3; //c1 is an object of class Compl ex
     c1.set_data(3,4);
-    c1.show_data();
+    c2.set_data(5,6);
+    c3=c1.add(c2);
+    c3.show_data();
     return 0;
 
 }
@@ -63,4 +72,8 @@ int main()
 
 }
 
+we can't add the two directly, we need operator overloading for it,
+therefore;
+c3=c1+c2 is incorrect.
 
+*/
