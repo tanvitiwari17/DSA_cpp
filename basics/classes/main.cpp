@@ -9,16 +9,16 @@ classes require no backward compatibility.
 #include <iostream>
 using namespace std;
 
-class Complex{
+class Complex{ //class is a description of an object
 
 private :
-    int a,b;
+    int a,b; //these are not class variables, they are called instance member variable (aka attributes, data members, fields, properties
 public :
-    void set_data(int x, int y)
+    void set_data(int x, int y) // instance member function
     {
         a = x; b=y;
     }
-    void show_data()
+    void show_data()    // instance member function (aka methods,procedures,actions,operations,services
     {
         cout<<"\na="<<a<<" b="<<b;
     }
@@ -30,11 +30,12 @@ public :
      return (temp);
     }
 };
-
+// object state : collection of values of its instance member variables
+// object behavior : instance member functions
 int main()
 {
 
-    Complex c1,c2,c3; //c1 is an object of class Compl ex
+    Complex c1,c2,c3; //c1,c2,c3 are objects(instances) of class Compl ex
     c1.set_data(3,4);
     c2.set_data(5,6);
     c3=c1.add(c2);
