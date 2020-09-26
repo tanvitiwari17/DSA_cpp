@@ -13,10 +13,8 @@ void fun()
     x : memory is allocated at the start of the program. Memory is destroyed after the program ends.
     y : memory is allocated and deallocated on every function call
     x : memory is allocated once, for the whole program
-
     only one copy of static member variable for whole class.
     Any object can use the same copy of class variable.
-
     static member function can only access static members, since they can be called w/o creating an object
     */
 }
@@ -48,7 +46,6 @@ int main()
 if roi would have been a public member variable,
 we could've accessed it using:
     Account :: roi =4.5;
-
 if the word static was not written in member fnction, then we require an object to call the static variable like:- a1.setRoi(4.5f);
 */
 Account :: setRoi(4.5f); // callable w/o object
