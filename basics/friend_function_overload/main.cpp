@@ -1,3 +1,12 @@
+/*
+
+overloading:
+~ binary operator
+~ unary operator
+~ insertion and extraction operators
+
+*/
+
 #include <iostream>
 using namespace std;
 

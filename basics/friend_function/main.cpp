@@ -7,6 +7,7 @@ but it cannot access members of the class directly.
 ~it should not be defined with membership label.
 ~ can be declared in public or private, doesn't matter
 ~ can be friend to more than one class.
+~ Member function of one class can be a friend to another class.
 */
 
 #include <iostream>

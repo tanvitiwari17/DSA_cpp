@@ -1,3 +1,24 @@
+/*
+for a member function of one class be friend of another:
+
+class A
+{
+public:
+    void fun()
+    {   ...    }
+    void foo();
+    {...}
+};
+class B
+{
+friend void A::fun(); // scope resolution operator required
+friend void A::foo();
+//if all functions of class A are friend to class B, then instead of typing one by one,
+// we can directly type:
+// friend class A;
+}
+*/
+
 #include <iostream>
 using namespace std;
 class B; // declaring so than friend function in A could recognize 'B'
@@ -36,3 +57,5 @@ int main()
     fun(ob1,ob2);
     return 0;
 }
+
+
