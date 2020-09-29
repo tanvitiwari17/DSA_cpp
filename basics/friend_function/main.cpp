@@ -5,7 +5,8 @@
 but it cannot access members of the class directly.
 ~It has no caller object.
 ~it should not be defined with membership label.
-
+~ can be declared in public or private, doesn't matter
+~ can be friend to more than one class.
 */
 
 #include <iostream>
