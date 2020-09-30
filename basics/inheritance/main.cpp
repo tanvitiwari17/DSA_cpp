@@ -58,7 +58,7 @@ this is called Association.
 -Aggregation
 -Composition
 -Inheritance
-
+- 'is a' relationship is always implemented as a public inheritance.
 */
 
 #include<stdio.h>
