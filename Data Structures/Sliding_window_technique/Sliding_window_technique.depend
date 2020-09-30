@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1601486888 source:e:\ds\cpp\data structures\sliding_window_technique\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+

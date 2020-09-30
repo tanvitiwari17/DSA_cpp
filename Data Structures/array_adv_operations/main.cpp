@@ -36,18 +36,28 @@ void LeftRotate(int arr[],int n)
     }
     arr[n-1]=temp;
 }
+
+// prefix sum of the array (cumulative, L->R)
+void FillPrefixSum(int arr[],int n,int PrefixSum[])
+{
+    PrefixSum[0] = arr[0];
+    for (int i=1;i<n;i++)
+        PrefixSum[i]=PrefixSum[i-1]+arr[i];
+}
+
 void display(int arr[],int n)
 {
     int i;
     for (i=0;i<n;i++)
     {
-        cout<<arr[i];
+        cout<<arr[i]<<" ";
     }
 }
 int main()
 {
     int arr[]={1,2,0,4,0,3};
     int n= sizeof(arr)/sizeof(arr[0]);
+    int PrefixSum[n];
     display(arr,n);
     cout<<endl;
     Reverse(arr,n);
@@ -58,6 +68,12 @@ int main()
     cout<<endl;
     LeftRotate(arr,n);
     display(arr,n);
+    cout<<endl;
+    FillPrefixSum(arr,n,PrefixSum);
+    for (int i=0;i<n;i++)
+    {
+        cout<<PrefixSum[i]<<" ";
+    }
 
 
     return 0;
