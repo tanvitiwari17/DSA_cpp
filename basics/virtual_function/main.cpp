@@ -7,6 +7,14 @@ to let compiler know that we need dynamic/late binding , we use 'virtual' keywor
 so now, instead of looking at the type of pointer, it checks the content of pointer
 
 there can be multiple virtual functions
+
+Virtual function working concept:
+
+1. if a class contains at least one virtual function, compiler creates a variable as a member of that class on its own,
+   (pointer variable : *_vptr), which is inherited by child class(therefore, compiler does not create it).
+
+2. Compiler also creates a static array called vtable (of function pointers , that contains address of only virtual functions.), in both parent and child class.
+    the *_vptr contains the address of vtable
 */
 
 #include <iostream>
