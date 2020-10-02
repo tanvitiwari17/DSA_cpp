@@ -1,7 +1,7 @@
 /*
 
 function overloading : to implement polymorphism.
-|- means one than one function with similar meaning having same name ;
+|- means more than one function with similar meaning having same name ;
 one function name overloaded with different jobs .
 
 methods to implement polymorphism:
