@@ -27,7 +27,7 @@ while(low<high)
 }
 }
 // left rotate array by one
-void LeftRotate(int arr[],int n)
+void LeftRotateOne(int arr[],int n)
 {
     int temp=arr[0];
     for (int i=1;i<n;i++)
@@ -35,6 +35,11 @@ void LeftRotate(int arr[],int n)
         arr[i-1]=arr[i];
     }
     arr[n-1]=temp;
+}
+void LeftRotation(int arr[],int n,int d) // d: rotate by d
+{
+    for (int i =0;i<d;i++)
+        LeftRotateOne(arr,n);
 }
 
 // prefix sum of the array (cumulative, L->R)
@@ -66,7 +71,10 @@ int main()
     MoveZeros(arr,n);
     display(arr,n);
     cout<<endl;
-    LeftRotate(arr,n);
+    LeftRotateOne(arr,n);
+    display(arr,n);
+    cout<<endl;
+    LeftRotation(arr,n,3);
     display(arr,n);
     cout<<endl;
     FillPrefixSum(arr,n,PrefixSum);

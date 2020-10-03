@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1601751239 source:e:\ds\cpp\basics\arr_rotation_juggling\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
