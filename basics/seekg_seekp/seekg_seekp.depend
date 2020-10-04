@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1601797299 source:e:\ds\cpp\basics\seekg_seekp\main.cpp
+	<iostream>
+	<fstream>
+
