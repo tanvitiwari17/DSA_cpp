@@ -28,3 +28,30 @@ Iterators:
 
 eg: sort() algorithm have two parameters, starting iterator and ending iterator.
 */
+
+/*
+
+Containers:
+-collection of classes
+-are implemented as generic class templates.
+- help us to implement and replicate simple and complex data structures very easily like arrays,linked list,associative arrays ,etc.
+- used to hold different types of objects
+- common containers:
+        vector : replicates arrays
+        queue  : replicates queues
+        stack  : replicates stack
+        priority_queue : replicates heaps
+        list : replicate linked list
+        set  : replicate trees
+        map  : associative arrays
+Classification of Containers:
+    Sequence Containers
+        -like array,linked lost,etc
+    Associative Containers
+        -Sorted data structure like map,set,etc
+    Unordered Associative containers
+        -Unsorted Data structures
+    Containers Adapters:
+        -Interfaces to sequence containers
+
+*/
