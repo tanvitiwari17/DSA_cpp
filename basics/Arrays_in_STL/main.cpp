@@ -4,13 +4,17 @@ Array container in STL provides us the implementation of static array
 Use header array -
 #include<array>
 
+array <data_type, array_size> object_name;
+
 functions:
--at() : returns value in array at the given range.
--front() : returns the first element in the array.
+-at()   : returns value in array at the given range.
+-front(): returns the first element in the array.
 -back() : returns the last element in the array.
 -fill() : assigns the given value to every element of the array.
 -swap() : swaps the content of two arrays of same type and size
 -size() : returns the number of element present in the array.
+-begin(): returns the iterator pointing to the first element of the array.
+-end()  : returns an iterator pointing to the element next to the last element of the array.
 
 */
 
