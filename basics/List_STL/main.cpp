@@ -41,7 +41,7 @@ int main()
 
     l1.pop_back();
     l1.pop_front();
-    l1.clear();
+    //l1.clear();
     list <int> :: iterator q=l1.begin();
     while(q!=l1.end()){
         cout<<*q<<" ";
