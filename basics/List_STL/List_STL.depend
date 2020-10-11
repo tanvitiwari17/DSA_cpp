@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1602437116 source:e:\ds\cpp\basics\list_stl\main.cpp
+	<iostream>
+	<list>
+
