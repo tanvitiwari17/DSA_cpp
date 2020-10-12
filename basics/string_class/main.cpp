@@ -37,7 +37,10 @@ string class:
     ~ string(const string &str)
 
 - operators:
-    =,+,+=,==,!=,<,<=,>,>=,[]
+    =,+,+=,==,!=,<,<=,>,>=,[],>>,<<
+
+- mixed operations: we can mix string objects with another string object or c style string or with character constant.
+
 
 */
 
@@ -50,18 +53,23 @@ int main()
 {
     string s1 ; // default constructor, empty string
     string s2="Hello"; // string s2(Hello) or string s2=string("Hello")
-    char str[]=" Hiii";
+    char str[]="Students";
     string s3=str; //string s3(str);
     string s4 = s2; // string s3(s2);
     s1="Morning"; // assignment operator
     string s5;
-    s5 = s2+s3;
+    s5 = s2+' '+s3; // therefore, string objects can be mixed (string and char)
     cout<<"s1="<<s1<<endl;
     cout<<"s2= "<<s2<<endl;
     cout<<"s3= "<<s3<<endl;
     cout<<"s4= "<<s4<<endl;
     cout<<"s5= "<<s5<<endl;
     s1+=s3;
-    cout<<"s1= "<<s1;
+    cout<<"s1= "<<s1<<endl;
+    string s6;
+    cout<<"Enter your name:";
+    cin>>s6;
+    cout<<s2+' '+ s6;
+
     return 0;
 }
