@@ -17,7 +17,7 @@ private:
             return(NULL)
         t = start;
         while (t->next !=NULL){
-            if(t->item!=currentData)
+            if(t->item!=Data)
                 return(t);
             t = t->next;
         }
@@ -35,8 +35,8 @@ public:
     void insertAtLast(int data);
     void insertAfter(int currentData,int data);
     int searchItem(int data);
-    int deleteItemFromeStart();
-    int deleteItemFromeLast();
+    int deleteItemFromStart();
+    int deleteItemFromLast();
     int deleteCurrentItem(int currentData);
     void sortList();
     void editItem(int currectData,int newData);
@@ -49,6 +49,19 @@ public:
             deleteItemFromeStart();
     }
 };
+
+int LinkedListADT::countItems()
+{
+  int Count =0;
+  node *t;
+  t=start;
+  while(t->next!=NULL)
+  {
+      Count++;
+      t=t->next;
+  }
+  return(Count);
+}
 
 void LinkedListADT::insertAtStart(int data)
 {
@@ -88,6 +101,121 @@ void LinkedListADT::insertAfter(int currentData,int data)
         n->next = t->next;
         t->next = n;
         }
+}
+
+int LinkedListADT::searchItem()
+{
+
+}
+
+int LinkedListADT::deleteItemFromStart()
+{
+    node *t;
+        if (start ==NULL)
+            cout<<"empty list"<<endl;
+            return 0;
+        else
+        t=start;
+        start= start->next;
+        delete(t);
+        return(1);
+}
+
+int LinkedListADT::deleteItemFromLast()
+{
+    node *t1,t1;
+        if (start ==NULL)
+            cout<<"empty list"<<endl;
+            return 0;
+        if (start->next ==NULL){
+            delete(start);
+            start=NULL;
+            return 1;
+        }
+        t1,t2=start;
+        do{
+            t2=t1;
+            t1=t1->next;
+          } while(t1->next != NULL);
+
+        t2->next=NULL;
+        delete(t);
+        return(1);
+}
+
+int LinkedListADT::deleteCurrentItem(int currentData)
+{
+    node *t = Search(currentData);
+    if (t==NULL)
+    {
+        cout<<"No such value exists";
+        return 0;
+    }
+    while(t->next != NULL)
+    {
+        t->item = t->next->item;
+        t=t->next;
+    }
+    deleteItemFromLast();
+    return(1);
+}
+
+void LinkedListADT::sortList()
+{
+
+}
+
+void LinkedListADT::editItem(int currentData,int newData)
+{
+    node *t = Search(currentData);
+    if (t==NULL)
+    {
+        cout<<"No such value exists";
+    }
+    else
+        t->item = newData;
+}
+
+void LinkedListADT::viewList()
+{
+    if (start==NULL)
+    {
+       cout<<"Underflow"<<endl;
+    }
+    node *t;
+    t=start;
+    while(t->next!=NULL)
+    {
+        cout<<t->item<<" ";
+        t=t->next;
+    }
+}
+
+int LinkedListADT::getFirstItem()
+{
+   if (start==NULL)
+   {
+       cout<<"Underflow"<<endl;
+       return (-1);
+    }
+    else
+        return(start->next);
+}
+
+int LinkedListADT::getLastItem()
+{
+    if (start==NULL)
+   {
+       cout<<"Underflow"<<endl;
+       return (-1);
+    }
+   node *t;
+    t=start;
+    while(t->next!=NULL)
+    {
+        t=t->next;
+    }
+    return(t->item);
 }
 
 int main()
