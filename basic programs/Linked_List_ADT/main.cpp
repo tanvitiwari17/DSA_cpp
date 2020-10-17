@@ -14,10 +14,10 @@ private:
     {
         node *t;
         if (start == NULL)
-            return(NULL)
+            return(NULL);
         t = start;
-        while (t->next !=NULL){
-            if(t->item!=Data)
+        while (t!=NULL){
+            if(t->item==data)
                 return(t);
             t = t->next;
         }
@@ -46,16 +46,18 @@ public:
     ~LinkedListADT()
     {
         while(start!=NULL)
-            deleteItemFromeStart();
+            deleteItemFromStart();
     }
 };
 
 int LinkedListADT::countItems()
 {
-  int Count =0;
+  int Count = 0;
+  if (start==NULL)
+    return 0;
   node *t;
   t=start;
-  while(t->next!=NULL)
+  while(t!=NULL)
   {
       Count++;
       t=t->next;
@@ -103,17 +105,27 @@ void LinkedListADT::insertAfter(int currentData,int data)
         }
 }
 
-int LinkedListADT::searchItem()
+int LinkedListADT::searchItem(int data)
 {
+    node *t;
+    int pos=0;
+    t=start;
+    while(t!=NULL){
+        pos++;
+        if (t->item == data)
+            return(pos);
+        t=t->next;
+    }
+    return(-1);
 
 }
 
 int LinkedListADT::deleteItemFromStart()
 {
     node *t;
-        if (start ==NULL)
+        if (start ==NULL){
             cout<<"empty list"<<endl;
-            return 0;
+            return 0;}
         else
         t=start;
         start= start->next;
@@ -123,15 +135,15 @@ int LinkedListADT::deleteItemFromStart()
 
 int LinkedListADT::deleteItemFromLast()
 {
-    node *t1,t1;
         if (start ==NULL)
-            cout<<"empty list"<<endl;
-            return 0;
-        if (start->next ==NULL){
+            {cout<<"Underflow"<<endl;
+            return 0;}
+        if (start->next == NULL){
             delete(start);
             start=NULL;
             return 1;
         }
+        node *t1,*t2;
         t1,t2=start;
         do{
             t2=t1;
@@ -139,7 +151,7 @@ int LinkedListADT::deleteItemFromLast()
           } while(t1->next != NULL);
 
         t2->next=NULL;
-        delete(t);
+        delete(t1);
         return(1);
 }
 
@@ -151,7 +163,7 @@ int LinkedListADT::deleteCurrentItem(int currentData)
         cout<<"No such value exists";
         return 0;
     }
-    while(t->next != NULL)
+    while(t->next!= NULL)
     {
         t->item = t->next->item;
         t=t->next;
@@ -162,7 +174,22 @@ int LinkedListADT::deleteCurrentItem(int currentData)
 
 void LinkedListADT::sortList()
 {
-
+    node *t;
+    int r,i,x,n;
+    n=countItems();
+    for(r=1;r<=n-1;r++)
+    {
+        t=start;
+        for(i=0;i<=n-1-r;i++)
+        {
+            if(t->item >t->next->item){
+                x = t->item;
+                t->item = t->next->item;
+                t->next->item = x;
+            }
+            t = t->next;
+        }
+    }
 }
 
 void LinkedListADT::editItem(int currentData,int newData)
@@ -170,7 +197,7 @@ void LinkedListADT::editItem(int currentData,int newData)
     node *t = Search(currentData);
     if (t==NULL)
     {
-        cout<<"No such value exists";
+        cout<<"No such value exists"<<endl;
     }
     else
         t->item = newData;
@@ -184,22 +211,24 @@ void LinkedListADT::viewList()
     }
     node *t;
     t=start;
-    while(t->next!=NULL)
+    while(t!=NULL)
     {
         cout<<t->item<<" ";
         t=t->next;
     }
+        cout<<endl;
+
 }
 
 int LinkedListADT::getFirstItem()
 {
    if (start==NULL)
    {
-       cout<<"Underflow"<<endl;
+       cout<<"List is empty, ";
        return (-1);
     }
     else
-        return(start->next);
+        return(start->item);
 }
 
 int LinkedListADT::getLastItem()
@@ -220,5 +249,30 @@ int LinkedListADT::getLastItem()
 
 int main()
 {
+    LinkedListADT l1;
+    cout<<"first item: "<<l1.getFirstItem()<<endl;
+    cout<<"count: "<<l1.countItems()<<endl;
+    l1.insertAtStart(10);
+    l1.insertAtStart(20);
+    l1.insertAtStart(30);
+    cout<<"count: "<<l1.countItems()<<endl;
+    cout<<"first item: "<<l1.getFirstItem()<<endl;
+    cout<<"last item: "<<l1.getLastItem()<<endl;
+    l1.viewList();
+    l1.insertAtLast(40);
+    l1.viewList();
+    l1.insertAfter(20,5);
+    l1.viewList();
+    l1.sortList();
+    l1.viewList();
+    l1.deleteItemFromStart();
+    //l1.deleteItemFromLast();
+    //l1.deleteCurrentItem(5);
+    l1.viewList();
+    l1.editItem(10,15);
+    l1.viewList();
+    cout<<l1.searchItem(20);
+
+
     return 0;
 }
