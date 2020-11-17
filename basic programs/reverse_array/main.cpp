@@ -4,7 +4,7 @@ using namespace std;
 //reversing
 void rev_arr(int arr[],int start,int last)
 {
-    if (start>=last)
+    if (start >= last)
     return;
 
     int temp = arr[start];
@@ -16,7 +16,7 @@ void rev_arr(int arr[],int start,int last)
 void display(int arr[],int n)
 {
     for(int i=0;i<n;i++)
-        cout<<i<<" ";
+        cout<<arr[i]<<" ";
 }
 int main()
 {
@@ -31,7 +31,7 @@ int main()
     cout<<"Original Array: ";
     display(arr,n);
     rev_arr(arr,0,n-1);
-    cout<<"\nReversed Array:";
+    cout<<"\nReversed Array: ";
     display(arr,n);
     return 0;
 }
