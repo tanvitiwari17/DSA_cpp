@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1605721848 source:e:\ds\cpp\basic programs\range_array\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
