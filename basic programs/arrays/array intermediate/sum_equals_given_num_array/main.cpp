@@ -16,8 +16,8 @@ int count_pair(int arr[],int n,int sum)
 }
 int main()
 {
-    int arr[]={1,1,1,1};//{1,5,7,-1,5};
-    int sum=2;//6;
+    int arr[]={1,5,7,1};//{1,1,1,1};//{1,5,7,-1,5};
+    int sum=6;//6;
     int n=sizeof(arr)/sizeof(arr[0]);
     int pairs = count_pair(arr,n,sum);
     cout<<"Pairs: "<<pairs;

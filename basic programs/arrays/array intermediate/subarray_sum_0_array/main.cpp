@@ -19,8 +19,8 @@ bool subarrayexist(int arr[],int n)
 }
 int main()
 {
-    int arr[] ={-3,2,1,1,6};
-    int n=sizeof(arr)/sizeof(arr[0]);
+    int arr[] = {-3,2,3,1,6};//{-3,2,1,1,6};
+    int n=sizeo f(arr)/sizeof(arr[0]);
     if (subarrayexist(arr,n))
         cout<<"Subarray Exists";
     else

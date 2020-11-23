@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1606141145 source:e:\ds\cpp\basic programs\arrays\array intermediate\factorial_of_largest number_array\main.cpp
+	<iostream>
+	<algorithm>
+	<bits/stdc++.h>
+
