@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1606242702 source:e:\ds\cpp\basic programs\arrays\array intermediate\minimum_number_of_jumps_arrays\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
