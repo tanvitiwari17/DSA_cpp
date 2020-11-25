@@ -1,26 +1,38 @@
+// TC -O(n) SC - O(1)
+
 #include <iostream>
 #include<bits/stdc++.h>
 using namespace std;
 
 int minJumps(int arr[],int n)
 {
-/*    int i,counter=-1;
-    do{
-        counter++;
-        i=arr[i];
+    if (n<=1)
+        return 0;
+    if (arr[0]==0)
+    return -1;
+
+    int maxreach=arr[0];
+    int step = arr[0];
+    int jump =1;
+
+    int i=1;
+    for(i=1;i<n;i++){
+        if (i==n-1)
+            return jump;
+
+        maxreach=max(maxreach,i+arr[i]);
+        step--;
+
+        if(step==0){
+            jump++;
+
+            if(i>maxreach)
+                return -1;
+
+            step = maxreach-i;
+        }
     }
-    while(i<n);
-
-    for(i=0;i<n;i=i+arr[i])
-    {
-        if (i>n)
-            counter=counter+1;
-        counter++;
-    }
-
-    return counter;
-
-*/
+    return -1;
 }
 
 int main()

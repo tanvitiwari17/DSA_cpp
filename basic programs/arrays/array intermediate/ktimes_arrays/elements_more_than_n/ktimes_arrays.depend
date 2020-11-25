@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1606322966 source:e:\ds\cpp\basic programs\arrays\array intermediate\ktimes_arrays\elements_more_than_n\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
