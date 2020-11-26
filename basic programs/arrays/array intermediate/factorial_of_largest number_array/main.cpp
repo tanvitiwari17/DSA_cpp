@@ -4,17 +4,6 @@
 
 using namespace std;
 
-
-int fact(int n)
-{
-    int fac=1;
-    for (int i=n;i>0;i--)
-    {
-        fac=fac*i;
-    }
-    return fac;
-
-}
 int main()
 {
     int test_cases;
@@ -22,10 +11,46 @@ int main()
     cin>>test_cases;
     for (int i=0;i<test_cases;i++)
     {
-        int num;
-        cout<<"num: ";
-        cin>>num;
-        cout<<"factorial of "<<num<<" is : "<<fact(num)<<endl;
+        int n;
+        cout<<"enter num: ";
+        cin>>n;
+
+        int q=2;
+        int arr[100000]={0};
+        arr[0]=1;
+        int len=1;
+        int x=0;
+        int num=0;
+        while(q<=n)
+        {
+            x=0;
+            num=0;
+            while(x<len)
+            {
+                arr[x] = arr[x]*q;
+                arr[x] = arr[x]+num;
+                num = arr[x]/10;
+                arr[x]= arr[x]%10;
+                x++;
+            }
+
+            while(num!=0)
+            {
+                arr[len]=num%10;
+                num = num/10;
+                len++;
+            }
+            q++;
+        }
+        len--;
+
+        while(len>=0)
+        {
+            cout<<arr[len];
+            len = len - 1;
+        }
+
+        cout<<endl;
     }
     return 0;
 }

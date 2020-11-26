@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1606407694 source:e:\ds\cpp\basic programs\arrays\array intermediate\rearrange_alternate_positive_negative_array\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
