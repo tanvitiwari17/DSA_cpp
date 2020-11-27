@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1606481504 source:e:\ds\cpp\basic programs\arrays\array intermediate\count_inversion_arrays\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
