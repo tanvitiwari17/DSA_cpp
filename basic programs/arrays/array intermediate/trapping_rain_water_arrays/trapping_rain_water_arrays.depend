@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1606672812 source:e:\ds\cpp\basic programs\arrays\array intermediate\trapping_rain_water_arrays\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
