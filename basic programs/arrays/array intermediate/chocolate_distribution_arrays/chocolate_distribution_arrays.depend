@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1606674317 source:e:\ds\cpp\basic programs\arrays\array intermediate\chocolate_distribution_arrays\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
