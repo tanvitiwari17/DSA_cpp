@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1606757666 source:e:\ds\cpp\basic programs\arrays\array intermediate\palindrome_arrays\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
