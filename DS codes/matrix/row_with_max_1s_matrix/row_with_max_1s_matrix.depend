@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1607085240 source:e:\ds\cpp\ds codes\matrix\row_with_max_1s_matrix\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+	<vector>
+
