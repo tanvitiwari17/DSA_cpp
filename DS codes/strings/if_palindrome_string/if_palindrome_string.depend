@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1611776007 source:e:\dsa_cpp\ds codes\strings\if_palindrome_string\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
