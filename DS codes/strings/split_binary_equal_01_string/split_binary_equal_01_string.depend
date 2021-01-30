@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1612021962 source:e:\dsa_cpp\ds codes\strings\split_binary_equal_01_string\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
