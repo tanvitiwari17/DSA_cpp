@@ -9,7 +9,7 @@ void display(int arr[],int n)
 int main()
 {
  int n,i,ele;
-    int c_0=0,c_1=0,c_2=0;
+    int count0=0,count1=0,count2=0;
     cout<<"Enter size of array:";
     cin>>n;
     int arr[n];
@@ -21,19 +21,27 @@ int main()
 
     for (i =0;i<n;i++)
         if (arr[i]== 0)
-        c_0+=1;
+        count0+=1;
      else if (arr[i] == 1)
-        c_1+=1;
-     else if (arr[i]==2)
-        c_2+=1;
-        else
-        break;
-    for (i=0;i<c_0;i++)
-        arr[i]=0;
-    for (i=c_0;i<(c_0+c_1);i++)
-        arr[i]=1;
-    for (i=(c_0+c_1);i<(c_0+c_1+c_2);i++)
-        arr[i]=2;
+        count1+=1;
+     else
+        count2+=1;
+   i=0;
+     while (count0 > 0) {
+        arr[i++] = 0;
+        count0--;
+    }
+
+    while (count1 > 0) {
+        arr[i++] = 1;
+        count1--;
+    }
+
+    while (count2 > 0) {
+        arr[i++] = 2;
+        count2--;
+    }
+
         cout<<"\nnew Array: ";
         display(arr,n);
 
