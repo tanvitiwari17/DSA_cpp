@@ -1,6 +1,5 @@
 Node* findIntersection(Node* head1, Node* head2)
 {
-    // Your Code Here
     Node* temp1=head1;
     Node* temp2=head2;
     Node* head=NULL;
