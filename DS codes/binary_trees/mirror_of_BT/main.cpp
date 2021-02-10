@@ -26,15 +26,18 @@ if(root==NULL)
    inorder(root->right);
 }
 
-void mirrorify(node *root,node ** mirror)
+void mirror(node *root)
 {
-    if(root==NULL){
-        mirror=NULL;
+    if (root->right == NULL || root->left == NULL)
         return;
-    }
-    *mirror=createnode(root->data);
-    mirrorify(root->left,&((*mirror)->right));
-    mirrorify(root->right,&((*mirror)->left));
+    node* t = root->left;
+    root->left = root->right;
+    root->right = t;
+
+    if (root->left)
+        mirror(root->left);
+    if (root->right)
+        mirror(root->right);
 }
 int main()
 {
@@ -45,10 +48,9 @@ int main()
     tree->right->right=createnode(4);
     cout<<"Inorder of original tree: ";
     inorder(tree);
-    node* mirror =NULL;
-    mirrorify(tree,&mirror);
+    mirror(tree);
 
     cout<<"\nInorder of mirror tree: ";
-    inorder(mirror);
+    inorder(tree);
     return 0;
 }
