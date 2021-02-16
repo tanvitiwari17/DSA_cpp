@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1613481523 source:e:\dsa_cpp\ds codes\searching_sorting\search_element_differ_atmost_by_k\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
