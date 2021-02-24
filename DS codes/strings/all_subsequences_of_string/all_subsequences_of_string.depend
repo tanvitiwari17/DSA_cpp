@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1614168104 source:e:\dsa_cpp\ds codes\strings\all_subsequences_of_string\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
