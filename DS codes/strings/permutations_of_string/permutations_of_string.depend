@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1612016539 source:e:\dsa_cpp\ds codes\strings\permutations_of_string\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
